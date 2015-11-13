@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<div class="center">
+<h1 id="red">Makes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody class ="center">
+    <% @makes.each do |make| %>
+      <tr>
+        <td><%= link_to make.name, make %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<br>
+
+<%= link_to 'New Make', new_make_path %>
+</div>

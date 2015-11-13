@@ -1,0 +1,25 @@
+<body class = "center">
+<p id="notice"><%= notice %></p>
+
+<h1 id="red">Types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @types.each do |type| %>
+      <tr>
+        <td><%= link_to type.name, type%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Type', new_type_path %>
+</body>

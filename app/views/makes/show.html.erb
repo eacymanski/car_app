@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<h2>
+  <strong id="red">Name:</strong>
+  <%=@make.name %>
+</h2>
+<p>
+  <strong id="red">Models: </strong>
+</p>
+<ul>
+<%@make.models.each do |model|%>
+  <li><%=model.name%> (<%=Type.find(model.type_id).name%>)</li>
+<%end%>
+</ul>
+
+<%= link_to 'Edit', edit_make_path(@make) %> 
+<%= link_to 'Destroy', @make, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Back', makes_path %>
